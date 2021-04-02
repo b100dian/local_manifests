@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+    <remote name="vendor"
+            fetch="https://github.com"
+            revision="lineage-17.1" />
+	
+    <remote name="device"
+            fetch="https://github.com"
+            revision="lineage-17.1"/>
+
+    <remote name="vendor-10"
+            fetch="https://github.com"
+            revision="tucana-user-10-QKQ1.190825.002-20.2.10-release-keys"/>
+
+    <remote name="kernel"
+            fetch="https://github.com"
+            revision="tucana-q-oss"/>
+
+    <remote name="hardware"
+            fetch="https://github.com"
+            revision="lineage-17.1" />
+
+    <remote name="sdclang"
+            fetch="https://github.com"
+            revision="pie" />
+
+    <!-- Compiler -->
+    <project path="prebuilds/sdclang/linux-x86_64" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86/" 
+        remote="sdclang" />
+
+    <!--Device Trees-->
+    <project path="device/xiaomi/tucana" name="b100dian/android_device_xiaomi_tucana" remote="device" />
+
+    <!-- Kernel-->
+    <project path="kernel/xiaomi/tucana" name="b100dian/Xiaomi_Kernel_OpenSource" remote="kernel" />
+    <project path="kernel/xiaomi/tucana/drivers/staging/qcacld-3.0" name="MiCode/vendor_qcom_opensource_wlan" remote="kernel" />
+
+    <!-- Vendor folders -->
+    <!-- <project path="vendor/xiaomi/tucana" name="AndroidBlobs/vendor_xiaomi_tucana" remote="vendor-10" />  -->
+    <project path="vendor/xiaomi/tucana" name="b100dian/android_vendor_xiaomi_tucana" remote="vendor" />
+
+<!-- 
+    <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="hardware"/>
+ -->
+</manifest>
