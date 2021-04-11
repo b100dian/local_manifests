@@ -18,16 +18,16 @@
             fetch="https://github.com"
             revision="tucana-q-oss"/>
 
-    <remote name="hardware"
-            fetch="https://github.com"
-            revision="lineage-17.1" />
+    <remote name="qcom"
+            fetch="https://source.codeaurora.org/"
+            revision="refs/tags/LA.UM.8.9.r1-03800-sm6150.0" />
 
     <remote name="sdclang"
             fetch="https://github.com"
             revision="pie" />
 
     <!-- Compiler -->
-    <project path="prebuilds/sdclang/linux-x86_64" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86/" 
+    <project path="prebuilts/sdclang/linux-x86_64" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86/" 
         remote="sdclang" />
 
     <!--Device Trees-->
@@ -35,13 +35,15 @@
 
     <!-- Kernel-->
     <project path="kernel/xiaomi/tucana" name="b100dian/Xiaomi_Kernel_OpenSource" remote="kernel" />
-    <project path="kernel/xiaomi/tucana/drivers/staging/qcacld-3.0" name="MiCode/vendor_qcom_opensource_wlan" remote="kernel" />
+
+    <!-- Audio -->
+    <!-- <project path="kernel/xiaomi/tucana/techpack/audio" name="MiCode/vendor_qcom_opensource_audio-kernel" remote="kernel" /> -->
+
+    <!-- Wifi driver (inlined in drivers/staging -->
+    <!-- <project path="vendor/qcom/opensource/wlan" name="MiCode/vendor_qcom_opensource_wlan" remote="kernel" /> -->
+    <!-- <project path="device/qcom/common" name="quic/la/device/qcom/common" remote="qcom" /> -->
 
     <!-- Vendor folders -->
-    <!-- <project path="vendor/xiaomi/tucana" name="AndroidBlobs/vendor_xiaomi_tucana" remote="vendor-10" />  -->
     <project path="vendor/xiaomi/tucana" name="b100dian/android_vendor_xiaomi_tucana" remote="vendor" />
 
-<!-- 
-    <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="hardware"/>
- -->
 </manifest>
