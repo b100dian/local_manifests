@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <manifest>
-
-    <remote name="vendor"
-            fetch="https://github.com"
-            revision="lineage-17.1" />
-	
-    <remote name="device"
-            fetch="https://github.com"
-            revision="lineage-17.1"/>
-
-    <remote name="vendor-10"
-            fetch="https://github.com"
-            revision="tucana-user-10-QKQ1.190825.002-20.2.10-release-keys"/>
-
-    <remote name="kernel"
-            fetch="https://github.com"
-            revision="tucana-q-oss"/>
-
-    <remote name="qcom"
-            fetch="https://source.codeaurora.org/"
-            revision="refs/tags/LA.UM.8.9.r1-03800-sm6150.0" />
-
     <remote name="sdclang"
             fetch="https://github.com"
             revision="pie" />
@@ -30,20 +9,31 @@
     <project path="prebuilts/sdclang/linux-x86_64" name="ThankYouMario/proprietary_vendor_qcom_sdclang-8.0_linux-x86/" 
         remote="sdclang" />
 
-    <!--Device Trees-->
-    <project path="device/xiaomi/tucana" name="b100dian/android_device_xiaomi_tucana" remote="device" />
+    <!--Device Tree-->
+    <project path="device/xiaomi/tucana" name="b100dian/android_device_xiaomi_tucana" revision="refs/tags/lineage-17.1-prerelease"/>
 
     <!-- Kernel-->
-    <project path="kernel/xiaomi/tucana" name="b100dian/Xiaomi_Kernel_OpenSource" remote="kernel" />
-
-    <!-- Audio -->
-    <!-- <project path="kernel/xiaomi/tucana/techpack/audio" name="MiCode/vendor_qcom_opensource_audio-kernel" remote="kernel" /> -->
-
-    <!-- Wifi driver (inlined in drivers/staging -->
-    <!-- <project path="vendor/qcom/opensource/wlan" name="MiCode/vendor_qcom_opensource_wlan" remote="kernel" /> -->
-    <!-- <project path="device/qcom/common" name="quic/la/device/qcom/common" remote="qcom" /> -->
+    <project path="kernel/xiaomi/tucana" name="b100dian/Xiaomi_Kernel_OpenSource" revision="tucana-hybris-17.1"/>
 
     <!-- Vendor folders -->
-    <project path="vendor/xiaomi/tucana" name="b100dian/android_vendor_xiaomi_tucana" remote="vendor" />
+    <project path="vendor/xiaomi/tucana" name="b100dian/android_vendor_xiaomi_tucana" revision="refs/tags/lineage-17.1-prerelease"/>
+
+    <!-- Sailfish HADK -->
+    <project path="rpm/" name="b100dian/droid-hal-tucana" revision="master" />
+    <project path="hybris/droid-configs" name="b100dian/droid-config-tucana" revision="master" />
+    <project path="hybris/droid-hal-version-tucana" name="b100dian/droid-hal-version-tucana" revision="master" />
+
+    <remote name="qcom"
+            fetch="https://source.codeaurora.org/"
+            revision="refs/tags/LA.UM.8.9.r1-03800-sm6150.0" />
+
+    <!-- Audio -->
+    <!-- <project path="kernel/xiaomi/tucana/techpack/audio" name="MiCode/vendor_qcom_opensource_audio-kernel" /> -->
+
+    <!-- Wifi driver (inlined in drivers/staging -->
+    <!-- <project path="vendor/qcom/opensource/wlan" name="MiCode/vendor_qcom_opensource_wlan" /> -->
+    <!-- <project path="device/qcom/common" name="quic/la/device/qcom/common" remote="qcom" /> -->
+
+
 
 </manifest>
