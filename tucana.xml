@@ -23,7 +23,10 @@
     <project path="hybris/droid-configs" name="b100dian/droid-config-tucana" revision="master" />
     <project path="hybris/droid-hal-version-tucana" name="b100dian/droid-hal-version-tucana" revision="master" />
 
-    <remote name="qcom"
+    <project path="external/miniaudiopolicy" name="sailfishos-sony-tama/miniaudiopolicy" revision="main" />
+
+
+    <remote name="caf"
             fetch="https://source.codeaurora.org/"
             revision="refs/tags/LA.UM.8.9.r1-03800-sm6150.0" />
 
